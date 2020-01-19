@@ -4,15 +4,45 @@ namespace ShoppingCart.Model
 {
     public class Coupon
     {
-        public double MinimumPurchaseAmount { get; set; }
-        public double DiscountRate { get; set; }
-        public DiscountType DiscountType { get; set; }
+        private double MinimumPurchaseAmount { get; set; }
+        private double DiscountRate { get; set; }
+        private DiscountType DiscountType { get; set; }
 
-        public Coupon(double MinimumPurchaseAmount, double DiscountRate, DiscountType DiscountType)
+        public Coupon(double minimumPurchaseAmount, double discountRate, DiscountType discountType)
         {
-            this.MinimumPurchaseAmount = MinimumPurchaseAmount;
-            this.DiscountRate = DiscountRate;
-            this.DiscountType = DiscountType;
+            MinimumPurchaseAmount = minimumPurchaseAmount;
+            DiscountRate = discountRate;
+            DiscountType = discountType;
+        }
+
+        public double getMinimumPurchaseAmount()
+        {
+            return MinimumPurchaseAmount;
+        }
+
+        public void setMinimumPurchaseAmount(double minimumPurchaseAmount)
+        {
+            MinimumPurchaseAmount = minimumPurchaseAmount;
+        }
+
+        public double getDiscountRate()
+        {
+            return DiscountRate;
+        }
+
+        public void setDiscountRate(double discountRate)
+        {
+            DiscountRate = discountRate;
+        }
+
+        public DiscountType getDiscountType()
+        {
+            return DiscountType;
+        }
+
+        public void setDiscountType(DiscountType discountType)
+        {
+            DiscountType = discountType;
         }
     }
 }

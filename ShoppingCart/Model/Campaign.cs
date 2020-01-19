@@ -4,17 +4,17 @@ namespace ShoppingCart.Model
 {
     public class Campaign
     {
-        public Category Category { get; set; }
-        public double DiscountRate { get; set; }
-        public int MinimumItemCount { get; set; }
-        public DiscountType DiscountType { get; set; }
+        private Category Category { get; set; }
+        private double DiscountRate { get; set; }
+        private int MinimumItemCount { get; set; }
+        private DiscountType DiscountType { get; set; }
 
-        public Campaign(Category Category, double DiscountRate, int MinimumItemCount, DiscountType DiscountType)
+        public Campaign(Category category, double discountRate, int minimumItemCount, DiscountType discountType)
         {
-            this.Category = Category;
-            this.DiscountRate = DiscountRate;
-            this.MinimumItemCount = MinimumItemCount;
-            this.DiscountType = DiscountType;
+            Category = category;
+            DiscountRate = discountRate;
+            MinimumItemCount = minimumItemCount;
+            DiscountType = discountType;
         }
 
         public Category getCategory()

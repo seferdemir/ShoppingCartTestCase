@@ -5,15 +5,15 @@
         private string Title { get; set; }
         private Category ParentCategory { get; set; }
 
-        public Category(string Title)
+        public Category(string title)
         {
-            this.Title = Title;
+            this.Title = title;
         }
 
-        public Category(string Title, Category ParentCategory)
+        public Category(string title, Category parentCategory)
         {
-            this.Title = Title;
-            this.ParentCategory = ParentCategory;
+            this.Title = title;
+            this.ParentCategory = parentCategory;
         }
 
         public string getTitle()
@@ -31,9 +31,9 @@
             return ParentCategory;
         }
 
-        public void setParentCategory(Category category)
+        public void setParentCategory(Category parentCategory)
         {
-            ParentCategory = category;
+            ParentCategory = parentCategory;
         }
     }
 }
